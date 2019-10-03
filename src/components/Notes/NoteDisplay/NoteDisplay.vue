@@ -52,12 +52,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+* {
+  margin: 1em;
+}
 .note {
   border: solid;
   border-radius: 1em;
   border-color: grey;
-  width: 30em;
-  margin: 0.5em;
+  width: 25em;
+  .button {
+    padding: 0.25em;
+  }
 }
 </style>

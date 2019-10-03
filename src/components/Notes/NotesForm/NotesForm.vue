@@ -136,11 +136,19 @@ export default {
 </script>
 
 <style lang="less" scoped>
+* {
+  margin: 0.5em;
+}
 .form {
+  grid-column-start: 1;
+  align-self: start;
+  justify-self: center;
+
   display: flex;
   flex-direction: column;
   width: 35%;
   align-items: center;
+  margin: 1em;
 
   button {
     width: 5em;
@@ -160,6 +168,6 @@ export default {
 }
 
 .edit {
-  width: 100%;
+  width: 90%;
 }
 </style>
