@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="title">
-      <h3>C4C Scaffold</h3>
+      <router-link to="/" tag="h3">C4C Scaffold</router-link>
     </div>
 
     <div class="navlinks">
@@ -31,12 +31,18 @@
     width: 25%;
   }
   button {
+    display: block;
+    width: 5em;
+    height: 5em;
     letter-spacing: 4px;
+    font-weight: bold;
     background: none;
     text-decoration: none;
     border: none;
-    font-weight: bold;
-    padding: 1em;
+    outline: none;
+  }
+  button:hover {
+    color: white;
   }
 }
 </style>

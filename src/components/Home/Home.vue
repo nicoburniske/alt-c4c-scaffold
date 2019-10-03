@@ -8,14 +8,14 @@
 
     <!-- v-for basically renders any element in a for loop. Here, are doing it for each object
       in the names array. We also are tracking the index of each element so that we can use it
-      as the key, but this is bad practice-->
+    as the key, but this is bad practice-->
     <!-- this :class tag is different from the one above. If it has ':' in front of it, that
       means that vue is handling it. What this does is it renders css styling conditionally. So if
-      name.nameIsBlue is true, it applies the css.-->
+    name.nameIsBlue is true, it applies the css.-->
     <!-- we are toggling nameIsBlue using @click. @click triggers the event whenever the html
       element is clicked. There are other ones like @hover and bunch of things you can look into,
       but this is the most common. So when we click a name, it toggles nameIsBlue in the object
-      from the array from true to false-->
+    from the array from true to false-->
     <p
       v-for="(name, index) in names"
       :key="index"
@@ -24,7 +24,7 @@
     >
       <!-- This is how we render dynamic data in vue. Use mustaches and whenever the data changes
         vue reflects the change. This is the main power of modern js frameworks like vue,
-        react or angular-->
+      react or angular-->
       {{ name.name }}
     </p>
     <p>
@@ -32,10 +32,10 @@
       Our backend will provide unique keys
     </p>
     <p>
-      <strong
-        >For an explanation of how this all works, read through the Home.vue
-        file.</strong
-      >
+      <strong>
+        For an explanation of how this all works, read through the Home.vue
+        file.
+      </strong>
     </p>
   </div>
 </template>
@@ -88,12 +88,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style scoped>
-* {
+<style lang="less" scoped>
+.home > * {
   margin: 1em;
-}
-.home {
-  text-align: center;
 }
 .blue {
   color: blue;
