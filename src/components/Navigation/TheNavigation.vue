@@ -18,8 +18,8 @@
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: rgb(204, 112, 166);
-  font-family: "Montserrat", sans-serif;
+  background-color: var(--header-color);
+  font-family: var(--main-font);
 
   .title {
     text-transform: uppercase;
