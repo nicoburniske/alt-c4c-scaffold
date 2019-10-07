@@ -5,7 +5,7 @@
         <h4>Title: {{ note.title }}</h4>
         <p>{{ note.content }}</p>
         <button @click="editState = true">Edit</button>
-        <button @click="$emit('delete-note', noteIndex)">Delete</button>
+        <button @click="deleteNote(noteIndex)">Delete</button>
       </div>
       <div v-else>
         <notes-form
@@ -21,6 +21,7 @@
 
 <script>
 import NotesForm from "../NotesForm/NotesForm";
+import { mapMutations } from "vuex";
 
 export default {
   name: "note-display",
@@ -43,9 +44,8 @@ export default {
     };
   },
   methods: {
-    editNoteSaved: function(note, noteIndex) {
-      console.log("Editing note", noteIndex);
-      this.$emit("edit-note-saved", note, noteIndex);
+    ...mapMutations(["deleteNote"]),
+    editNoteSaved: function() {
       this.editState = false;
     }
   }

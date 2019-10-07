@@ -122,9 +122,13 @@ export default {
         console.log("working");
         if (this.isEditForm) {
           console.log("Editing note", this.editNoteIndex);
-          this.$emit("edit-note-saved", this.note, this.editNoteIndex);
+          this.$store.commit("editNoteSaved", {
+            note: this.note,
+            index: this.editNoteIndex
+          });
+          this.$emit("edit-note-saved");
         } else {
-          this.$emit("saveNote", this.note);
+          this.$store.commit("saveNote", this.note);
           this.resetNote();
         }
       } else {
