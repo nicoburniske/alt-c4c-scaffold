@@ -40,6 +40,7 @@
     text-decoration: none;
     border: none;
     outline: none;
+    font-family: var(--main-font);
   }
   button:hover {
     color: white;
