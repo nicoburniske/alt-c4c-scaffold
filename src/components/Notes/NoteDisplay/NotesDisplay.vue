@@ -36,8 +36,14 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style scoped>
+* {
+  margin: 1em;
+}
 .notes {
+  grid-column-start: 2;
+  justify-self: center;
+
   display: flex;
   flex-direction: column;
 }

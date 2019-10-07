@@ -1,7 +1,8 @@
 <template>
   <div class="center">
-    <notes-form v-on:saveNote="saveNote($event)" />
+    <notes-form class="form" v-on:saveNote="saveNote($event)" />
     <notes-display
+      class="notes"
       :notes="notes"
       v-on:delete-note="deleteNote($event)"
       v-on:edit-note-saved="editNoteSaved"
@@ -38,8 +39,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .center {
-  display: -webkit-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 </style>
